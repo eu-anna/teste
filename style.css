@@ -1,232 +1,267 @@
-/* ======= RESET ======= */
+:root{
+
+  --background-linear: linear-gradient(90deg, #00253c 0%, #01717c 100%);
+  --background-linear2: linear-gradient(90deg, #184375 0%, #00B0AB 100%);
+  --background-button: #F6B25A;
+  --secondary-color: #001d34;
+  --tertiary-color: #043E5A;
+  --font-color: #333;
+  --background-color: #f5f5f5;
+  --header-height: 60px;
+  --footer-height: 40px;
+  --text-color: #ffffff;
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
-  background: #f5f5f5;
+  background-color: #f5f5f5;
   color: #333;
 }
 
-/* ======= HEADER ======= */
 header {
+  color: white;
+  background: var(--background-linear);
+  max-height: 100px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 50px;
-  background: #0a2f40;
-  color: #fff;
+  flex-direction: row;
+  justify-content: space-between;  
 }
 
 #logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  height: 85px;
+  margin: 10px;
+  margin-top: 15px;
+  margin-left: 47px;
 }
 
-#menuHeader {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  list-style: none;
+.logoImage {
+  height: -webkit-fill-available;
+  width: 85px;
 }
 
-#menuHeader li a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
+.logoText {
+  height: 22px;
+  width: 146px;
+  transform: translateY(-150%);
 }
 
-/* ======= BOTÕES ======= */
-.btnGroup {
+#menuHeader{
   display: flex;
-  gap: 15px;
-  margin-top: 20px;
+  align-items: flex-end;
+  justify-content: space-evenly;
+  list-style-type: none;
+  max-width: 400px;
+  width: 100%;
+  margin-right: 60px;
+}
+
+#menuHeader li{
+  font-size: 24px;
+  font-weight: 700;
+  
 }
 
 .btnAccess {
-  background-color: #ffb800;
-  color: #000;
+  width: 117.34px;
+  height: 46.32px;
   border: none;
-  padding: 12px 24px;
-  font-size: 16px;
-  font-weight: bold;
   border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  background-color: var(--background-button);
+  font-size: 20px;
+  font-weight: 700;
+  opacity: 1;
+  transition: 0.5s;
 }
 
-.btnAccess:hover {
-  background-color: #e6a600;
-  transform: scale(1.05);
+button:hover {
+  cursor: no-drop;
+  opacity: 0.3;
+  transition: 0.5s;
 }
 
-.btnMore {
-  background-color: transparent;
-  color: #fff;
-  border: 2px solid #fff;
-  padding: 12px 24px;
-  font-size: 16px;
-  font-weight: bold;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.btnMore:hover {
-  background-color: #fff;
-  color: #0a2f40;
-  transform: scale(1.05);
-}
-
-/* ======= CONTAINER ======= */
 #container {
-  padding: 50px;
-  text-align: center;
+  height: 688px;
+  background:  url("../img/backLandingPage.png") right no-repeat,  /* primeira camada = imagem por cima */
+  var(--background-linear); 
+  color: var(--text-color);
+  background-position: right;
+  background-repeat: no-repeat;
 }
 
-.infoContainer h1 {
-  font-size: 2.5rem;
-  color: #0a2f40;
+#container button{
+  width: 218px;
 }
 
-.infoContainer h4 {
-  margin-top: 15px;
-  font-size: 1.2rem;
-  color: #555;
+#container .btnAccess {
+  margin-right: 23px;
 }
 
-/* ======= CARDS ======= */
-#cardsContainer {
-  margin: 50px 0;
+.infoContainer{
+  width: 537px;
+  margin-left: 141px;
+  padding-top: 69.68px;
+  display: inline-block;
+}
+.infoContainer h1{
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 37px;
 }
 
-#cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  list-style: none;
-  padding: 0;
+.infoContainer h4{
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 40.68px;
 }
 
-.card {
-  background: #fff;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  text-align: center;
-}
-
-.card img {
-  width: 40px;
-  margin-bottom: 15px;
-}
-
-.card h3 {
-  margin-bottom: 10px;
-  color: #0a2f40;
-}
-
-/* ======= BLOCO INFO ======= */
-.bgInfo {
-  background: #0a2f40;
-  color: #fff;
-  padding: 60px 20px;
-  border-radius: 12px;
-}
-
-.bgInfo h2 {
-  font-size: 1.8rem;
-  margin-bottom: 20px;
-}
-
-.infoTextImg h3 {
-  margin-top: 20px;
-  font-weight: normal;
-}
-
-/* ======= SOBRE NÓS ======= */
-#sobre-nos {
-  background: 
-    linear-gradient(rgba(10, 47, 64, 0.8), rgba(10, 47, 64, 0.8)),
-    url("../img/sobre-nos-bg.png") no-repeat center center;
+.backgroundImage{
+  display: inline-block;
+  height: 688px;
+  width: 100%;
+  background-image: url('../images/background.png');
   background-size: cover;
-  color: #fff;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#cardsContainer {
+  width: 100%;
+  height: 371px;
+  margin-top: 90px;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  z-index: 2;
+}
+
+#cards{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.card {
+  background: var(--tertiary-color);
+  width: 249.68px;
+  height: 371px;
+  border-radius: 8px;
+  padding: 40px 0 0 15px;
+  margin: 0 25px;
+  list-style-type: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  position: relative;
+  border: none;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-left: 2px solid var(--secondary-color);
+  border-right: 2px solid var(--secondary-color);
+  border-bottom: 2px solid var(--secondary-color);
+  border-top: 2px solid var(--secondary-color);
+  box-sizing: border-box;
+  transition: height 0.3s ease;
+  pointer-events: none;
+  height: 0%;
+  width: 0%;
+  border-radius: 8px;
+}
+.card:hover::before{
+  height: 100%;
+  width: 100%;
+  transition: 0.3s ease;
+
+}
+
+.card h3{
+  margin-top: 24px;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.info {
+  background-color: var(--secondary-color);
+  position: relative;
+  top: 169px;
+  padding: 371px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.bgInfo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1161px;
+}
+
+.bgInfo h2{
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 24px;
   text-align: center;
-  padding: 80px 20px;
-  margin-top: 50px;
-  border-radius: 12px;
+  max-width: 950px;
 }
 
-#sobre-nos h2 {
-  font-size: 2.2rem;
-  margin-bottom: 20px;
-  font-weight: bold;
+.infoTextImg {
+  display: flex;
+  align-items: center;
+  margin-top: 36px;
+  background-image: url("../img/imageInfo.png");
+  height: 325px;
+  background-position: 465px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+}
+.infoTextImg h3{
+  max-width: 400px;
 }
 
-#sobre-nos p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  max-width: 900px;
-  margin: 0 auto;
-}
 
-/* ======= FOOTER ======= */
-#footer {
-  background: #0a2f40;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
-}
-
-/* ======= RESPONSIVIDADE ======= */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    gap: 15px;
+ /*360px (smartphones), 768px (tablets) e 1366px ou 1920px (desktops),*/
+ @media screen and (max-width: 768px) {
+    .btnAccess {
+    width: 20%;
+    font-size: 18px;
   }
-
   #container {
-    padding: 20px;
+    height: 466px;
+    background-size: contain;
   }
-
+  #container button {
+    width: 20%;
+    font-size: 18px;
+  }
   .infoContainer h1 {
-    font-size: 2rem;
-  }
+    font-size: 24px;
+    width: 537px;
 
-  #sobre-nos {
-    padding: 50px 15px;
-    border-radius: 0;
   }
-
-  #sobre-nos h2 {
-    font-size: 1.8rem;
-  }
-
-  #sobre-nos p {
-    font-size: 1rem;
-  }
+    .card {
+        width: 50%;
+        padding: 15px 0 0 15px;
+        height: 75%;
+        margin: 0 15px;
+    }
+    .card img {
+      height: 35px;
+    }
+.card h3 {
+  font-size: 14px;
 }
-
-@media (max-width: 480px) {
-  .infoContainer h1 {
-    font-size: 1.6rem;
-  }
-
-  .btnGroup {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  #sobre-nos h2 {
-    font-size: 1.5rem;
-  }
-
-  #sobre-nos p {
-    font-size: 0.95rem;
-  }
-}
+ }
