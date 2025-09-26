@@ -1,0 +1,232 @@
+/* ======= RESET ======= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #f5f5f5;
+  color: #333;
+}
+
+/* ======= HEADER ======= */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: #0a2f40;
+  color: #fff;
+}
+
+#logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#menuHeader {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+}
+
+#menuHeader li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* ======= BOTÕES ======= */
+.btnGroup {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.btnAccess {
+  background-color: #ffb800;
+  color: #000;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btnAccess:hover {
+  background-color: #e6a600;
+  transform: scale(1.05);
+}
+
+.btnMore {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btnMore:hover {
+  background-color: #fff;
+  color: #0a2f40;
+  transform: scale(1.05);
+}
+
+/* ======= CONTAINER ======= */
+#container {
+  padding: 50px;
+  text-align: center;
+}
+
+.infoContainer h1 {
+  font-size: 2.5rem;
+  color: #0a2f40;
+}
+
+.infoContainer h4 {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* ======= CARDS ======= */
+#cardsContainer {
+  margin: 50px 0;
+}
+
+#cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+.card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.card img {
+  width: 40px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  color: #0a2f40;
+}
+
+/* ======= BLOCO INFO ======= */
+.bgInfo {
+  background: #0a2f40;
+  color: #fff;
+  padding: 60px 20px;
+  border-radius: 12px;
+}
+
+.bgInfo h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.infoTextImg h3 {
+  margin-top: 20px;
+  font-weight: normal;
+}
+
+/* ======= SOBRE NÓS ======= */
+#sobre-nos {
+  background: 
+    linear-gradient(rgba(10, 47, 64, 0.8), rgba(10, 47, 64, 0.8)),
+    url("../img/sobre-nos-bg.png") no-repeat center center;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+  margin-top: 50px;
+  border-radius: 12px;
+}
+
+#sobre-nos h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+#sobre-nos p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ======= FOOTER ======= */
+#footer {
+  background: #0a2f40;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* ======= RESPONSIVIDADE ======= */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  #container {
+    padding: 20px;
+  }
+
+  .infoContainer h1 {
+    font-size: 2rem;
+  }
+
+  #sobre-nos {
+    padding: 50px 15px;
+    border-radius: 0;
+  }
+
+  #sobre-nos h2 {
+    font-size: 1.8rem;
+  }
+
+  #sobre-nos p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .infoContainer h1 {
+    font-size: 1.6rem;
+  }
+
+  .btnGroup {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #sobre-nos h2 {
+    font-size: 1.5rem;
+  }
+
+  #sobre-nos p {
+    font-size: 0.95rem;
+  }
+}
